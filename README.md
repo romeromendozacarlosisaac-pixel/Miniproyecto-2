@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/romeromendozacarlosisaac-pixel/Miniproyecto-2
-cd heart-disease-mlops
+cd Miniproyecto-2
 ```
 
 
