@@ -20,7 +20,7 @@ pip install pandas scikit-learn joblib matplotlib seaborn fastapi uvicorn eviden
 
 ### 3. Instalar Minikube
 
-En **PowerShell como Administrador:**
+En **PowerShell como Administrador** pegar y ejecutar lo siguiente:
 
 ```powershell
 New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
@@ -33,7 +33,7 @@ if ($oldPath.Split(';') -inotcontains 'C:\minikube'){
 }
 ```
 
-Cerrar y reabrir PowerShell, luego verificar:
+Cerrar y reabrir PowerShell, luego verificar con la siguiente línea de código que se haya instalado correctamente:
 
 ```powershell
 minikube version
@@ -42,6 +42,7 @@ minikube version
 
 
 ### 4. Instalar kubectl
+Ejecutar la siguiente línea de código:
 
 ```powershell
 winget install -e --id Kubernetes.kubectl
@@ -54,9 +55,8 @@ kubectl version --client
 ```
 
 
-
 ### 5. Iniciar el cluster de Minikube
-
+Iniciar el cluster con la siguiente línea:
 ```powershell
 minikube start --driver=docker
 ```
@@ -70,11 +70,10 @@ kubectl get nodes
 
 El nodo debe aparecer en estado `Ready`.
 
-
-
 ### 6. Construir la imagen Docker dentro de Minikube
 
 > Este paso es clave: apunta el Docker de tu terminal al Docker **interno** de Minikube para que el cluster pueda usar la imagen sin necesitar Docker Hub.
+Con una sesión de Docker abierta en el pc, ejecute la siguiente línea en la terminal:
 
 ```powershell
 & minikube -p minikube docker-env --shell powershell | Invoke-Expression
@@ -108,7 +107,7 @@ Debe mostrar `STATUS: Running` y `READY: 1/1`.
 
 ### 8. Exponer el servicio
 
-En una **terminal aparte**, dejar corriendo:
+Sin cerrar la terminal anterior, abrir una nueva terminal para ejecutar y dejar corriendo la siguiente línea:
 
 ```powershell
 minikube tunnel
