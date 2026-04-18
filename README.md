@@ -159,7 +159,11 @@ Respuesta esperada:
 }
 ```
 
-Para generar el drift report se debe ejecutar el endpoint monitoring y luego 
+Para generar el drift report se debe ejecutar el endpoint `get/monitor` presionando 'Try it out' de esta manera se ejecuta el monitoreo, después de esto se hace lo mismo en el endpoint `get/report`. Para ver el reporte use este URL en el navegador:
+
+```
+http://127.0.0.1/report
+```
 
 
 
