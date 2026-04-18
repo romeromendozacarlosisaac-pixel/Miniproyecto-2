@@ -3,7 +3,7 @@
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <url-del-repo>
+git clone https://github.com/romeromendozacarlosisaac-pixel/Miniproyecto-2
 cd heart-disease-mlops
 ```
 
@@ -14,7 +14,7 @@ cd heart-disease-mlops
 ```bash
 conda create -n ml_venv python=3.10
 conda activate ml_venv
-pip install pandas scikit-learn joblib matplotlib seaborn fastapi uvicorn
+pip install pandas scikit-learn joblib matplotlib seaborn fastapi uvicorn evidently
 ```
 
 
@@ -158,6 +158,8 @@ Respuesta esperada:
   "prediction": 0
 }
 ```
+
+Para generar el drift report se debe ejecutar el endpoint monitoring y luego 
 
 
 
