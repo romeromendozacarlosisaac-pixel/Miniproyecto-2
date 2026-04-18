@@ -4,3 +4,5 @@ scikit-learn
 joblib
 pydantic
 pandas
+evidently
+numpy
